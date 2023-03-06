@@ -23,6 +23,10 @@ function App() {
           element={<Page2 />}
         />
         <Route
+          path='/page2/:id'
+          element={<Page2 />}
+        />
+        <Route
           path='/page2/subpage/sub-subpage'
           element={<Page2 />}
         />
