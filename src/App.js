@@ -14,22 +14,26 @@ function App() {
           path='/'
           element={<Page1 />}
         />
-        <Route
-          path='/page2'
-          element={<Page2 />}
-        />
-        <Route
-          path='/page2/subpage'
-          element={<Page2 />}
-        />
-        <Route
-          path='/page2/:id'
-          element={<Page2 />}
-        />
-        <Route
-          path='/page2/subpage/sub-subpage'
-          element={<Page2 />}
-        />
+
+        <Route path='/page2'>
+          <Route
+            index
+            element={<Page2 />}
+          />
+          <Route
+            path='subpage'
+            element={<Page2 />}
+          />
+          <Route
+            path=':id'
+            element={<Page2 />}
+          />
+          <Route
+            path='subpage/sub-subpage'
+            element={<Page2 />}
+          />
+        </Route>
+
         <Route
           path='/page3'
           element={<Page3 />}
